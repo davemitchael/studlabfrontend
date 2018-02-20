@@ -1,0 +1,20 @@
+.navBarColor{
+  background-color: cadetblue;
+}
+
+a{
+  color: black;
+}
+
+a:link, a:active {
+  color: #ffffff;
+}
+a:visited {
+  color: #7f7e82;
+  font-weight:bold
+}
+a :hover {
+  color: #000003;
+  font-weight: bold;
+  text-decoration: none;
+}

@@ -1,0 +1,10 @@
+<div class="container">
+    <article>
+      <a routerLink="/taskInfo/{{this.task._id}}" href={{this.task.url}}><h4>{{this.task.name}}</h4></a>
+      <div class="row">
+           <div class="col-sm-1">Тема:</div>
+           <div class="col-md-11">{{this.task.theme}}</div>
+        </div>
+      <a ><button (click)="downloadFile()" class="btn btn-default pull-right">Завантажити</button></a>
+    </article>
+</div>

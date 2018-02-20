@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="container">
+     <div class="form-group control-label">
+       <h5>Пошук завдання</h5>
+     </div>
+    <form class="form-horizontal">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="form-group">
+              <div class="col-md-12">
+                <label class="col-md-0">Тип роботи</label>
+               <select class="form-control"  #TW>
+                <option class="form-control" *ngFor="let typework of this.typeWorks" [value]="typework">{{typework}}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-12">
+                <label class="col-md-0 ">Курс</label>
+                <select class="form-control" #C (change)="getSubjects($event.target.value)">
+                  <option class="form-control"  *ngFor="let course of this.courses" [value]="course">{{course}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="form-group">
+              <div class="col-md-12">
+                <label class="col-md-0 ">Предмет</label>
+                <select class="form-control" #S>
+                  <option class="form-control" *ngFor="let subject of this.subjects" [value]="subject">{{subject}}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-12">
+                <label class="col-md-0 ">Варіант</label>
+                <select class="form-control" #V>
+                   <option class="form-control" *ngFor="let variant of this.variants" [value]="variant">{{variant}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+    </form>
+    <button name="singlebutton" id="singlebutton" class=" btn btn-success pull-right" (click)="searchTasks(TW.value, S.value, V.value )">Search</button>
+  </div>
+</div>
+
+

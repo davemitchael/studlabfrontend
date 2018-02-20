@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="TaskContent">
+      <div *ngFor="let task of this.Tasks; let i = index">
+        <app-found-tasks [taskIndex]="i" [task]="task"></app-found-tasks>
+      </div>
+    </div>
+    <div class="row text-center bottom marginBootom">
+      <span *ngFor="let i of this.getNumberOfButton()">
+        <app-pagebutton [number]="i"></app-pagebutton>
+      </span>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="container marginTop">
+  <div class="container">
+<div class="form-horizontal">
+  <div class="form-group">
+<label class="col-sm-2  text-left">Назва роботи:</label>
+    <div class="col-sm-10">
+      <p>{{this.task?.name}}</p>
+     </div>
+   </div>
+   <div class="form-group">
+     <label class="col-sm-2  text-left">Тип роботи:</label>
+     <div class="col-sm-10">
+          <p>{{this.task?.typeWork}}</p>
+       </div>
+     </div>
+     <div class="form-group">
+       <label class="col-sm-2 text-left">Тема роботи:</label>
+       <div class="col-sm-10">
+          <p>{{this.task?.theme}}</p>
+     </div>
+   </div>
+   <div class="form-group">
+     <label class="col-sm-2 text-left">Предмет:</label>
+     <div class="col-sm-10">
+        <p>{{this.task?.subject}}</p>
+     </div>
+   </div>
+   <div class="form-group">
+     <label class="col-sm-2 text-left">Варіант:</label>
+     <div class="col-sm-10">
+       <p >{{this.task?.variant}}</p>
+    </div>
+  </div>
+  <div class="form-group">
+   <div class="container">
+     <h3>Текст роботи:</h3>
+   </div>
+    <div class="text-center" >
+     <iframe  class="forIframe" readonly="true" [src]="this.sanitizer.bypassSecurityTrustResourceUrl(this.url)"></iframe>
+      <!--  <iframe  class="forIframe" readonly="true" src="http://docs.google.com/gview?url={{this.sanitizer.bypassSecurityTrustResourceUrl(this.url)}}&embedded=true"></iframe> -->
+     </div>
+   </div>
+   <div class="form-group">
+     <div class="col-sm-offset-2 col-sm-10 ">
+       <button type="submit" class="btn btn-default pull-right" (click)="downloadFile()">Завантажити</button>
+     </div>
+   </div>
+ </div>
+   </div>
+ </div>
+
+

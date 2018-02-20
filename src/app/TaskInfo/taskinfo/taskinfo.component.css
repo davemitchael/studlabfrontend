@@ -1,0 +1,9 @@
+.marginTop{
+  margin-top: 4%;
+}
+.forIframe{
+  height: 100%;
+  width: 80%;
+  min-height: 600px;
+ /*  pointer-events: none; */
+}
